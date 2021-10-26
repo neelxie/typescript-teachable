@@ -1,8 +1,12 @@
 import React from 'react'
-export const Greet = () => {
+type GreetProps = {
+  name: string
+  messageCount: number
+}
+export const Greet = (props: GreetProps) => {
   return (
     <div>
-      <h2>Welcome Greatest! </h2>
+      <h2>Welcome Greatest {props.name}! Number of {props.messageCount} messages. </h2>
     </div>
   )
 }
